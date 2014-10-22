@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" debug="false">
+	
+	<appender name="myConsole" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="file" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/tmp/logs/weixin-manager.log" />
+		<param name="MaxFileSize" value="1MB" />
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss,SSS} %p (%c:%l)- %m%n" />
+		</layout>
+	</appender>
+
+	<!--
+	<appender name="jdbc" class="org.apache.log4j.jdbcplus.JDBCAppender">
+		<param name="connector" value="net.gehua.weixin.log4j.handler.MyJDBCPoolConnectionHandler" />
+		<param name="sql" value="INSERT INTO t_system_log(create_date,content,level,process_status,class_info) VALUES ('@LAYOUT:1@','@LAYOUT:2@','@PRIO@',0,'@LAYOUT:3@')" />
+		<param name="commit" value="true" />
+		<param name="buffer" value="20" />
+		<param name="quoteReplace" value="true" />
+		<param name="throwableMaxChars" value="3000" />
+		<param name="layoutPartsDelimiter" value="#" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss}#[%d{dd HH:mm:ss,SSS\} %-5p] [%t] %c{2\} - %m%n#%c{2\}" />
+		</layout>
+	</appender>
+	-->
+	
+	<root>
+		<level value="info" />
+		<!--
+			<appender-ref ref="myConsole" /> <appender-ref ref="file" />
+		-->
+		<appender-ref ref="myConsole" />
+	</root>
+</log4j:configuration>
