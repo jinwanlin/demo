@@ -1,5 +1,7 @@
 
-package com.ask.service.base;
+package com.demo.service.base;
+
+import java.util.List;
 
 
 public interface IGeneralService<T> {
@@ -46,4 +48,6 @@ public interface IGeneralService<T> {
      * @param pk
      */
     public void deleteByPrimaryKey(Long pk);
+    
+    public List<T> findAll();
 }

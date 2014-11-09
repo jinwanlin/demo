@@ -1,4 +1,4 @@
-package com.ask.dao.base;
+package com.demo.dao.base;
 
 import java.util.List;
 

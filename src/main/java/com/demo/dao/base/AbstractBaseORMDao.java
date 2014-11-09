@@ -1,9 +1,10 @@
-package com.ask.dao.base;
+package com.demo.dao.base;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -18,7 +19,7 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.ask.model.AbstractBaseModel;
+import com.demo.model.AbstractBaseModel;
 
 
 /**
@@ -119,6 +120,8 @@ public class AbstractBaseORMDao<T extends AbstractBaseModel, PK extends Serializ
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void create(final T entity) {
+    	entity.setCreateTime(new Date());
+    	entity.setUpdateTime(new Date());
         getHibernateTemplate().save(entity);
     }
 
@@ -162,6 +165,10 @@ public class AbstractBaseORMDao<T extends AbstractBaseModel, PK extends Serializ
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void saveOrUpdate(final T entity) {
+    	if(entity.getId()==null){
+        	entity.setCreateTime(new Date());
+    	}
+    	entity.setUpdateTime(new Date());
         getHibernateTemplate().saveOrUpdate(entity);
 
     }
@@ -173,6 +180,7 @@ public class AbstractBaseORMDao<T extends AbstractBaseModel, PK extends Serializ
      */
     @Transactional(propagation = Propagation.REQUIRED)
     public void update(final T entity) {
+    	entity.setUpdateTime(new Date());
         getHibernateTemplate().update(entity);
     }
 

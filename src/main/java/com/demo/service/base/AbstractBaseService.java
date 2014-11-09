@@ -1,11 +1,12 @@
 
-package com.ask.service.base;
+package com.demo.service.base;
 
 import java.io.Serializable;
+import java.util.List;
 
-import com.ask.dao.base.IGeneralJdbcDao;
-import com.ask.dao.base.IGeneralORMDao;
-import com.ask.model.AbstractBaseModel;
+import com.demo.dao.base.IGeneralJdbcDao;
+import com.demo.dao.base.IGeneralORMDao;
+import com.demo.model.AbstractBaseModel;
 
 
 
@@ -93,4 +94,7 @@ public class AbstractBaseService<T extends AbstractBaseModel> implements Seriali
         this.jdbcDao = jdbcDao;
     }
 
+    public List<T> findAll(){
+    	return generalDao.findAll();
+    }
 }

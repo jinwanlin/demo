@@ -1,6 +1,7 @@
-package com.ask.dao.base;
+package com.demo.dao.base;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * TODO class purpose description
@@ -54,4 +55,5 @@ public interface IGeneralORMDao<T, PK extends Serializable> {
      */
     public void update(final T entity);
 
+    public List<T> findAll();
 }

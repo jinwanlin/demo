@@ -12,7 +12,7 @@
     
  -->
  
- <context:component-scan base-package="com.ask" />
+ <context:component-scan base-package="com.demo" />
 
 <!--     Add new Managers here
     <import resource="cxf-servlet.xml"/>
@@ -20,7 +20,7 @@
     <import resource="spring-openjpa.xml"/> -->
     
         <!-- Activates scanning of @Repository and @Service -->
-    <!-- <context:component-scan base-package="com.ask.service"/> -->
+    <!-- <context:component-scan base-package="com.demo.service"/> -->
     
     	<!-- application info properties -->
 	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">

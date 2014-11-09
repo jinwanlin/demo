@@ -1,4 +1,4 @@
-package com.ask.controller.admin;
+package com.demo.controller.admin;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.ask.model.User;
-import com.ask.service.IUserService;
+import com.demo.model.User;
+import com.demo.service.IUserService;
 
 
 /**

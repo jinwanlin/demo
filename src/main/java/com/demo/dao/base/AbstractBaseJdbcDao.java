@@ -1,4 +1,4 @@
-package com.ask.dao.base;
+package com.demo.dao.base;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 
-import com.ask.model.AbstractBaseModel;
+import com.demo.model.AbstractBaseModel;
 
 
 /**

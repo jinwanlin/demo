@@ -1,9 +1,9 @@
-package com.ask.service;
+package com.demo.service;
 
 import javax.inject.Named;
 
-import com.ask.model.User;
-import com.ask.service.base.IGeneralService;
+import com.demo.model.User;
+import com.demo.service.base.IGeneralService;
 
 public interface IUserService extends IGeneralService<User> {
 

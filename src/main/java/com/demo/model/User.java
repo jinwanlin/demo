@@ -1,4 +1,4 @@
-package com.ask.model;
+package com.demo.model;
 
 
 /**

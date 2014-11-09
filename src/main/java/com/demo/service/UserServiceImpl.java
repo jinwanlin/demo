@@ -1,14 +1,14 @@
-package com.ask.service;
+package com.demo.service;
 
 import java.util.Random;
 
 import javax.annotation.Resource;
 import javax.inject.Named;
 
-import com.ask.dao.IUserDao;
-import com.ask.dao.base.IGeneralORMDao;
-import com.ask.model.User;
-import com.ask.service.base.AbstractBaseService;
+import com.demo.dao.IUserDao;
+import com.demo.dao.base.IGeneralORMDao;
+import com.demo.model.User;
+import com.demo.service.base.AbstractBaseService;
 
 @Named("userService")
 public class UserServiceImpl extends AbstractBaseService<User> implements IUserService {
