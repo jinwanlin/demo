@@ -1,5 +1,6 @@
 package com.demo.service;
 
+import java.util.List;
 import java.util.Random;
 
 import javax.annotation.Resource;
@@ -63,5 +64,14 @@ public class UserServiceImpl extends AbstractBaseService<User> implements IUserS
 		return dao.getUserByTelephone(telephone);
 	}
 
+	public List<User> list(String name, int page, int size){
+		IUserDao dao = (IUserDao) this.getGeneralDao();
+		return dao.list(name, page, size);
+	}
+	
+	public int count(String name){
+		IUserDao dao = (IUserDao) this.getGeneralDao();
+		return dao.count(name);
+	}
 
 }

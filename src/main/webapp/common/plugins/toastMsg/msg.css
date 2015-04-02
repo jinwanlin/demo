@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+.ui-popup > .ui-dialog{
+	border:0;
+	width:auto;
+	padding:0;
+	border-radius:0;
+}
+.ui-popup > iframe{
+	/* border-radius:6px; */
+}
+
+.ui-dialog-body {
+	background-color: #aaa;
+	min-width: 200px;
+	font-size: 26px;
+	color: white;
+	/* border-radius: 5px; */
+}
+
+.ui-dialog-content {
+	display: block;
+	text-align: center;
+	/* border-radius: 6px; */
+}
+
+.msg_success {
+	background-image: linear-gradient(to bottom, #5cb85c 0px, #419641 100%);
+	background-repeat: repeat-x;
+	border-color: #3e8f3e;
+}
+
+.msg_error {
+	background-image: linear-gradient(to bottom, #d9534f 0px, #c12e2a 100%);
+	background-repeat: repeat-x;
+	border-color: #b92c28;
+}
+
+.msg_warning {
+	background-image: linear-gradient(to bottom, #f0ad4e 0px, #eb9316 100%);
+	background-repeat: repeat-x;
+	border-color: #e38d13;
+}

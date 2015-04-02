@@ -40,14 +40,14 @@ public interface IGeneralService<T> {
      * @param pk
      * @return
      */
-    public T getByPrimaryKey(Long pk);
+    public T getByPrimaryKey(Long id);
 
     /**
      * 根据实体删除实体
      * 
      * @param pk
      */
-    public void deleteByPrimaryKey(Long pk);
+    public void deleteByPrimaryKey(Long id);
     
     public List<T> findAll();
 }

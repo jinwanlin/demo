@@ -10,7 +10,7 @@ package com.demo.model;
 public class User extends AbstractBaseModel {
 
 	
-	/** 账号（类似qq号）  */
+	/** 账号 */
 	private String telephone;
 
 	private String name;

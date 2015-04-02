@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.pagination {
+	margin: 20px auto;
+}
+.pagination ul{
+	padding: 0;
+}
+.pagination ul li{
+	display: inline-block;
+}
+
+.pagebanner, .pageTable{
+	text-align: center;
+}

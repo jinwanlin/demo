@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+/* 上传头像按钮 */
+a.upload_file {
+	position: relative;
+    background: url("../images/common_btn.png") no-repeat scroll 0 -100px transparent;
+    cursor: pointer;
+    display: inline-block;
+    height: 36px;
+    overflow: hidden;
+    width: 121px;
+}
+a.upload_file input[type=file] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 0;
+	height: 36px;
+	margin: 0;
+	padding: 0;
+	opacity: 0;
+	filter: alpha(opacity = 0); /* 解决IE兼容性 */
+	font-size: 36px;
+	cursor: pointer;
+}
+
+/* 上传头像按钮 */
+
+.avatar {
+	width: 130px;
+	height: 130px;
+}
+
+.price{
+	color:#f37800;
+	font-weight: 500;
+}
