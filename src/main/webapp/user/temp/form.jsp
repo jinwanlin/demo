@@ -14,7 +14,7 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">${empty user.id ? '添加' : '编辑'}用户</h4>
 			</div>
-			<form class="form-horizontal" action="app/user/${empty user.id ? 'save' : 'update'}" method="post" data-remote="true">
+			<form class="form-horizontal" action="user/${empty user.id ? 'save' : 'update'}" method="post" data-remote="true">
 				<div class="modal-body">
 					<input type="hidden" name="id" value="${user.id}">
 
