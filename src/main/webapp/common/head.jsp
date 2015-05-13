@@ -15,7 +15,7 @@
 					<!-- <li><a href="#">Dashboard</a></li>
 					<li><a href="#">Settings</a></li>
 					<li><a href="#">Profile</a></li> -->
-					<li><a href="app/admin/session/sign_out">退出</a></li>
+					<li><a href="admin/session/sign_out">退出</a></li>
 				</ul>
 				<!-- <form class="navbar-form navbar-right">
 					<input type="text" class="form-control" placeholder="Search...">
