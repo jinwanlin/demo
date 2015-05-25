@@ -12,7 +12,6 @@ import org.springframework.web.bind.ServletRequestUtils;
 
 public class BaseController {
 
-	public static final int DEFAULT_PAGE_SIZE = 20;
 
 	private String sessionUser;
 

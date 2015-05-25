@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import xjgz.com.tag.Pager;
+
 import com.demo.model.User;
 import com.demo.service.IUserService;
 
@@ -32,7 +34,7 @@ public class UserController extends BaseController{
 	@RequestMapping(value = "list")
 	public String index(Model model, HttpServletRequest request, @RequestParam(value="name", required=false) String name) throws ServletRequestBindingException {
 
-		List<User> list = userService.list(name, getPageIndex(request, "user"), DEFAULT_PAGE_SIZE);
+		List<User> list = userService.list(name, getPageIndex(request, "user"), Pager.DEFAULT_PAGE_SIZE);
 		int total = userService.count(name);
 		
 		model.addAttribute("list", list);
@@ -57,7 +59,7 @@ public class UserController extends BaseController{
 		model.addAttribute("user", user);
 		
 		
-		return "redirect:/app/user/list";
+		return "redirect:/user/list";
 	}
 	
 	@RequestMapping(value = "edit", method = RequestMethod.GET)
@@ -76,13 +78,13 @@ public class UserController extends BaseController{
 		userService.create(user);
 		model.addAttribute("user", user);
 		
-		return "redirect:/app/user/list";
+		return "redirect:/user/list";
 	}
 
 	@RequestMapping(value = "delete/{id}", method = RequestMethod.GET)
 	public String delete(Model model, @PathVariable("id") Long id) {
 		userService.deleteByPrimaryKey(id);
 		model.addAttribute("id", id);
-		return "redirect:/app/user/list";
+		return "redirect:/user/list";
 	}
 }

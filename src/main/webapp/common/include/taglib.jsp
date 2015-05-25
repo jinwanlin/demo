@@ -6,4 +6,5 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="xjgz" uri="/WEB-INF/tags/js.tld"%>
+<%@ taglib prefix="pager" uri="/WEB-INF/tags/pager.tld" %>
 <%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
